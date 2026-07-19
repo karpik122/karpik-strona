@@ -1,0 +1,14 @@
+{
+  "name": "karpik-strona",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node scripts/obfuscate.mjs",
+    "build:obfuscate": "node scripts/obfuscate.mjs"
+  },
+  "devDependencies": {
+    "css-shuffle": "^1.2.1"
+  }
+}

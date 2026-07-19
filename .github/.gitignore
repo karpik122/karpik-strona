@@ -1,0 +1,15 @@
+# Zależności
+node_modules/
+
+# Build output
+
+
+/src/
+
+# Logi i tymczasowe pliki
+npm-debug.log*
+*.log
+
+# Systemowe pliki
+.DS_Store
+Thumbs.db
