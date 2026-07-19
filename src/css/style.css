@@ -525,3 +525,13 @@ h1 span {
   }
 }
 
+.btn--glow {
+  box-shadow: 0 0 15px rgba(142, 241, 216, 0.4), 0 0 30px rgba(128, 162, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.btn--glow:hover {
+  box-shadow: 0 0 25px rgba(142, 241, 216, 0.6), 0 0 45px rgba(128, 162, 255, 0.5);
+  transform: scale(1.1) translateY(-2px);
+}
