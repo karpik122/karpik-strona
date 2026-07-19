@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria art | Patryk Karpiński</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="floating-bar">
+    <div class="profile-mini">
+      <img src="images/Me.jpg" alt="Zdjęcie profilowe" width="64" height="64" />
+      <div>
+        <strong>Patryk Karpiński</strong>
+        <span>Graphic & Web Portfolio</span>
+      </div>
+    </div>
+
+    <nav class="top-nav">
+      <a href="index.html">Strona główna</a>
+      <a href="gallery.html">Galeria art</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+
+    <a class="github-link" href="https://github.com/karpik122" rel="noopener" target="_blank">GitHub</a>
+  </div>
+
+  <header class="page-hero">
+    <div class="page-hero__content">
+      <p class="eyebrow">Galeria art</p>
+      <h1>Moje prace graficzne</h1>
+      <p class="lead">Kolekcja najciekawszych projektów wizualnych i eksperymentów artystycznych.</p>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <div class="gallery-grid">
+      <figure class="project-card gallery-item" data-src="images/spyxfamily1.png" data-alt="Projekt graficzny 1">
+        <img src="images/spyxfamily1.png" alt="Projekt graficzny 1" width="640" height="420" loading="lazy" decoding="async" />
+        <figcaption>Projekt visual #1</figcaption>
+      </figure>
+
+      <figure class="project-card gallery-item" data-src="images/spyxfamily2.png" data-alt="Projekt graficzny 2">
+        <img src="images/spyxfamily2.png" alt="Projekt graficzny 2" width="640" height="420" loading="lazy" decoding="async" />
+        <figcaption>Projekt visual #2</figcaption>
+      </figure>
+
+      <figure class="project-card gallery-item" data-src="images/anime.jpg" data-alt="Projekt graficzny 3">
+        <img src="images/anime.jpg" alt="Projekt graficzny 3" width="640" height="420" loading="lazy" decoding="async" />
+        <figcaption>Projekt visual #3</figcaption>
+      </figure>
+
+      <figure class="project-card gallery-item" data-src="images/heart.jpg" data-alt="Projekt graficzny 4">
+        <img src="images/heart.jpg" alt="Projekt graficzny 4" width="640" height="420" loading="lazy" decoding="async" />
+        <figcaption>Projekt visual #4</figcaption>
+      </figure>
+
+      <figure class="project-card gallery-item" data-src="images/Horimiya.jpg" data-alt="Projekt graficzny 5">
+        <img src="images/Horimiya.jpg" alt="Projekt graficzny 5" width="640" height="420" loading="lazy" decoding="async" />
+        <figcaption>Projekt visual #5</figcaption>
+      </figure>
+
+      <figure class="project-card gallery-item" data-src="images/mcDuck.jpg" data-alt="Projekt graficzny 6">
+        <img src="images/mcDuck.jpg" alt="Projekt graficzny 6" width="640" height="420" loading="lazy" decoding="async" />
+        <figcaption>Projekt visual #6</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+    <button class="gallery-modal__close" id="closeModal" aria-label="Zamknij podgląd">×</button>
+    <img id="modalImage" src="" alt="Podgląd projektu" />
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 Patryk Karpiński — portfolio graficzne</p>
+  </footer>
+
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('galleryModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    galleryItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        modalImage.src = item.dataset.src;
+        modalImage.alt = item.dataset.alt;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+    });
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+</body>
+</html>

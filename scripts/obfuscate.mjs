@@ -19,12 +19,15 @@ fs.rmSync(distDir, { recursive: true, force: true });
 fs.mkdirSync(distDir, { recursive: true });
 
 if (sourceDir) {
-  const indexPath = path.join(sourceDir, 'index.html');
   const cssPath = path.join(sourceDir, 'css');
   const imagesPath = path.join(sourceDir, 'images');
 
-  if (fs.existsSync(indexPath)) {
-    fs.cpSync(indexPath, path.join(distDir, 'index.html'));
+  const htmlFiles = fs.readdirSync(sourceDir)
+    .filter((file) => file.endsWith('.html'))
+    .sort();
+
+  for (const file of htmlFiles) {
+    fs.cpSync(path.join(sourceDir, file), path.join(distDir, file));
   }
 
   if (fs.existsSync(cssPath)) {
