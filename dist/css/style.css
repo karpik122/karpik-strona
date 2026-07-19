@@ -1,12 +1,12 @@
 :root {
-  --N: #0b1020;
-  --O: rgba(17, 24, 48, 0.82);
-  --P: #f5f7ff;
-  --Q: #bfc8ec;
-  --R: #7c9cff;
-  --S: #8df0d5;
-  --T: rgba(255, 255, 255, 0.14);
-  --U: 0 20px 40px rgba(0, 0, 0, 0.28);
+  --Q: #0b1020;
+  --R: rgba(17, 24, 48, 0.82);
+  --S: #f5f7ff;
+  --T: #bfc8ec;
+  --U: #7c9cff;
+  --V: #8df0d5;
+  --W: rgba(255, 255, 255, 0.14);
+  --X: 0 20px 40px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -26,7 +26,7 @@ body {
     radial-gradient(circle at top left, rgba(124, 156, 255, 0.28), transparent 24%),
     radial-gradient(circle at top right, rgba(141, 240, 213, 0.16), transparent 22%),
     linear-gradient(160deg, #070b17, #0c1530 60%, #111c3f);
-  color: var(--P);
+  color: var(--S);
   line-height: 1.7;
 }
 
@@ -43,9 +43,9 @@ body {
   padding: 1rem 1.2rem;
   border-radius: 20px;
   background: rgba(11, 16, 32, 0.8);
-  border: 1px solid var(--T);
+  border: 1px solid var(--W);
   backdrop-filter: blur(14px);
-  box-shadow: var(--U);
+  box-shadow: var(--X);
 }
 
 .b {
@@ -70,7 +70,7 @@ body {
 .b span {
   display: block;
   font-size: 0.84rem;
-  color: var(--Q);
+  color: var(--T);
 }
 
 .c {
@@ -80,7 +80,7 @@ body {
 }
 
 .c a {
-  color: var(--P);
+  color: var(--S);
   text-decoration: none;
   font-weight: 700;
   padding: 0.6rem 0.95rem;
@@ -113,9 +113,9 @@ img {
   padding: 2.4rem;
   border-radius: 28px;
   background: linear-gradient(180deg, rgba(22, 31, 67, 0.82), rgba(9, 14, 30, 0.88));
-  border: 1px solid var(--T);
+  border: 1px solid var(--W);
   backdrop-filter: blur(14px);
-  box-shadow: var(--U);
+  box-shadow: var(--X);
 }
 
 .f {
@@ -131,7 +131,7 @@ img {
   border-radius: 999px;
   background: rgba(124, 156, 255, 0.12);
   border: 1px solid rgba(124, 156, 255, 0.35);
-  color: var(--P);
+  color: var(--S);
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -139,7 +139,7 @@ img {
 .g {
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--S);
+  color: var(--V);
   font-weight: 800;
   font-size: 0.78rem;
 }
@@ -151,13 +151,13 @@ h1 {
 }
 
 h1 span {
-  color: var(--S);
+  color: var(--V);
 }
 
 .h {
   max-width: 760px;
   margin: 1.2rem auto 0;
-  color: var(--Q);
+  color: var(--T);
   font-size: 1.08rem;
 }
 
@@ -188,9 +188,9 @@ h1 span {
 }
 
 .l {
-  border: 1px solid var(--T);
+  border: 1px solid var(--W);
   background: rgba(255, 255, 255, 0.04);
-  color: var(--P);
+  color: var(--S);
 }
 
 .m {
@@ -224,11 +224,11 @@ h1 span {
 
 .q,
 .r {
-  background: var(--O);
-  border: 1px solid var(--T);
+  background: var(--R);
+  border: 1px solid var(--W);
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: var(--U);
+  box-shadow: var(--X);
   transition: transform 0.24s ease, border-color 0.24s ease;
 }
 
@@ -249,7 +249,7 @@ h1 span {
 
 .q p,
 .r figcaption {
-  color: var(--Q);
+  color: var(--T);
 }
 
 .s {
@@ -264,7 +264,7 @@ h1 span {
   border-radius: 999px;
   background: rgba(124, 156, 255, 0.14);
   border: 1px solid rgba(124, 156, 255, 0.4);
-  color: var(--P);
+  color: var(--S);
   font-size: 0.88rem;
   font-weight: 600;
 }
@@ -316,7 +316,7 @@ h1 span {
   max-width: min(100%, 900px);
   max-height: 90vh;
   border-radius: 16px;
-  box-shadow: var(--U);
+  box-shadow: var(--X);
 }
 
 .x {
@@ -329,7 +329,7 @@ h1 span {
   border-radius: 50%;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.12);
-  color: var(--P);
+  color: var(--S);
   font-size: 1.7rem;
 }
 
@@ -341,20 +341,20 @@ h1 span {
 
 .z {
   background: rgba(18, 25, 56, 0.86);
-  border: 1px solid var(--T);
+  border: 1px solid var(--W);
   border-radius: 22px;
   padding: 1.4rem 1.5rem;
-  box-shadow: var(--U);
+  box-shadow: var(--X);
 }
 
 .A {
   margin: 0;
-  color: var(--Q);
+  color: var(--T);
   font-size: 1.02rem;
 }
 
 .A a {
-  color: var(--S);
+  color: var(--V);
   text-decoration: none;
   font-weight: 700;
 }
@@ -366,7 +366,7 @@ h1 span {
 .B {
   text-align: center;
   padding: 1.2rem;
-  color: var(--Q);
+  color: var(--T);
 }
 
 @keyframes fadeIn {
@@ -402,10 +402,10 @@ h1 span {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--P);
+  color: var(--S);
   padding: 0.6rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid var(--T);
+  border: 1px solid var(--W);
   background: rgba(255, 255, 255, 0.04);
   font-weight: 700;
 }
@@ -425,8 +425,8 @@ h1 span {
   padding: 2rem;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(22, 31, 67, 0.82), rgba(9, 14, 30, 0.88));
-  border: 1px solid var(--T);
-  box-shadow: var(--U);
+  border: 1px solid var(--W);
+  box-shadow: var(--X);
 }
 
 .F {
@@ -442,11 +442,11 @@ h1 span {
 }
 
 .H {
-  background: var(--O);
-  border: 1px solid var(--T);
+  background: var(--R);
+  border: 1px solid var(--W);
   border-radius: 22px;
   padding: 1.2rem;
-  box-shadow: var(--U);
+  box-shadow: var(--X);
 }
 
 .H h3 {
@@ -455,7 +455,7 @@ h1 span {
 
 .H p,
 .H li {
-  color: var(--Q);
+  color: var(--T);
 }
 
 .I {
@@ -475,29 +475,68 @@ h1 span {
 }
 
 .J a {
-  color: var(--P);
+  color: var(--S);
   text-decoration: none;
 }
 
 .K {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.K svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
+}
+
+.L {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.M {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.M img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.M:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.15);
+}
+
+.N {
   display: grid;
   grid-template-columns: 1.25fr 0.95fr;
   gap: 1.2rem;
 }
 
-.L {
+.O {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 1rem;
 }
 
-.L span {
+.O span {
   padding: 0.38rem 0.75rem;
   border-radius: 999px;
   background: rgba(124, 156, 255, 0.14);
   border: 1px solid rgba(124, 156, 255, 0.4);
-  color: var(--P);
+  color: var(--S);
   font-size: 0.85rem;
   font-weight: 700;
 }
@@ -520,18 +559,18 @@ h1 span {
     padding: 0.5rem;
   }
 
-  .K {
+  .N {
     grid-template-columns: 1fr;
   }
 }
 
-.M {
+.P {
   box-shadow: 0 0 15px rgba(142, 241, 216, 0.4), 0 0 30px rgba(128, 162, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
 
-.M:hover {
+.P:hover {
   box-shadow: 0 0 25px rgba(142, 241, 216, 0.6), 0 0 45px rgba(128, 162, 255, 0.5);
   transform: scale(1.1) translateY(-2px);
 }

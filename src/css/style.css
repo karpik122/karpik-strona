@@ -479,6 +479,45 @@ h1 span {
   text-decoration: none;
 }
 
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.social-link svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
+}
+
+.instagram-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.instagram-preview__item {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.instagram-preview__item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.instagram-preview__item:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.15);
+}
+
 .cv-layout {
   display: grid;
   grid-template-columns: 1.25fr 0.95fr;
