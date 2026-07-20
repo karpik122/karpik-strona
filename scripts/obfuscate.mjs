@@ -22,6 +22,7 @@ fs.mkdirSync(distDir, { recursive: true });
 if (sourceDir) {
   const cssPath = path.join(sourceDir, 'css');
   const imagesPath = path.join(sourceDir, 'images');
+  const jsPath = path.join(sourceDir, 'js'); // Dodana ścieżka do folderu js
 
   const htmlFiles = fs.readdirSync(sourceDir)
     .filter((file) => file.endsWith('.html'))
@@ -37,6 +38,11 @@ if (sourceDir) {
 
   if (fs.existsSync(imagesPath)) {
     fs.cpSync(imagesPath, path.join(distDir, 'images'), { recursive: true });
+  }
+
+  // Dodane kopiowanie folderu js
+  if (fs.existsSync(jsPath)) {
+    fs.cpSync(jsPath, path.join(distDir, 'js'), { recursive: true });
   }
 }
 
