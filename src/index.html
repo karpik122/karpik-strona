@@ -193,39 +193,23 @@
 
   <div class="gallery-modal" id="galleryModal" aria-hidden="true">
     <button class="gallery-modal__close" id="closeModal" aria-label="Zamknij podgląd">×</button>
-    <img id="modalImage" src="" alt="Podgląd projektu" />
+    
+    <div class="modal-layout">
+      <img id="modalImage" src="" alt="Podgląd projektu" />
+      
+      <div class="modal-sidebar">
+        <p id="modalDesc"></p>
+        <span class="project-card__date" id="modalDate"></span>
+      </div>
+    </div>
   </div>
 
   <footer class="footer">
     <p>© 2026 Patryk Karpiński — portfolio graficzne</p>
   </footer>
 
-  <script>
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const modal = document.getElementById('galleryModal');
-    const modalImage = document.getElementById('modalImage');
-    const closeModal = document.getElementById('closeModal');
-
-    galleryItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        modalImage.src = item.dataset.src;
-        modalImage.alt = item.dataset.alt;
-        modal.classList.add('is-open');
-        modal.setAttribute('aria-hidden', 'false');
-      });
-    });
-
-    closeModal.addEventListener('click', () => {
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden', 'true');
-    });
-
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        modal.classList.remove('is-open');
-        modal.setAttribute('aria-hidden', 'true');
-      }
-    });
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+  <script src="js/dane.js"></script> <!-- Najpierw ładujemy teksty -->
+  <script src="js/galery.js"></script> <!-- Potem uruchamiamy galerię -->
 </body>
 </html>

@@ -40,35 +40,30 @@
 
   <main class="page-shell">
     <div class="gallery-grid">
-      <figure class="project-card gallery-item" data-src="images/spyxfamily1.png" data-alt="Projekt graficzny 1">
-        <img src="images/spyxfamily1.png" alt="Projekt graficzny 1" width="640" height="420" loading="lazy" decoding="async" />
-        <figcaption>Projekt visual #1</figcaption>
-      </figure>
-
-      <figure class="project-card gallery-item" data-src="images/spyxfamily2.png" data-alt="Projekt graficzny 2">
-        <img src="images/spyxfamily2.png" alt="Projekt graficzny 2" width="640" height="420" loading="lazy" decoding="async" />
-        <figcaption>Projekt visual #2</figcaption>
-      </figure>
-
-      <figure class="project-card gallery-item" data-src="images/anime.jpg" data-alt="Projekt graficzny 3">
-        <img src="images/anime.jpg" alt="Projekt graficzny 3" width="640" height="420" loading="lazy" decoding="async" />
-        <figcaption>Projekt visual #3</figcaption>
-      </figure>
-
-      <figure class="project-card gallery-item" data-src="images/heart.jpg" data-alt="Projekt graficzny 4">
-        <img src="images/heart.jpg" alt="Projekt graficzny 4" width="640" height="420" loading="lazy" decoding="async" />
-        <figcaption>Projekt visual #4</figcaption>
-      </figure>
-
-      <figure class="project-card gallery-item" data-src="images/Horimiya.jpg" data-alt="Projekt graficzny 5">
-        <img src="images/Horimiya.jpg" alt="Projekt graficzny 5" width="640" height="420" loading="lazy" decoding="async" />
-        <figcaption>Projekt visual #5</figcaption>
-      </figure>
-
-      <figure class="project-card gallery-item" data-src="images/mcDuck.jpg" data-alt="Projekt graficzny 6">
-        <img src="images/mcDuck.jpg" alt="Projekt graficzny 6" width="640" height="420" loading="lazy" decoding="async" />
-        <figcaption>Projekt visual #6</figcaption>
-      </figure>
+        <figure class="project-card gallery-item" data-src="images/spyxfamily1.png" data-alt="Projekt graficzny 1" data-desc="Twój krótki opis dla pierwszego obrazka. Możesz wpisać tu cokolwiek chcesz.">
+          <img src="images/spyxfamily1.png" alt="Projekt graficzny 1" width="640" height="420" loading="lazy" decoding="async" />
+          <figcaption>Projekt visual #1</figcaption>
+        </figure>
+        <figure class="project-card gallery-item" data-src="images/spyxfamily2.png" data-alt="Projekt graficzny 2">
+          <img src="images/spyxfamily2.png" alt="Projekt graficzny 2" width="640" height="420" loading="lazy" decoding="async" />
+          <figcaption>Projekt visual #2</figcaption>
+        </figure>
+        <figure class="project-card gallery-item" data-src="images/anime.jpg" data-alt="Projekt graficzny 3">
+          <img src="images/anime.jpg" alt="Projekt graficzny 3" width="640" height="420" loading="lazy" decoding="async" />
+          <figcaption>Projekt visual #3</figcaption>
+        </figure>
+        <figure class="project-card gallery-item" data-src="images/heart.jpg" data-alt="Projekt graficzny 4">
+          <img src="images/heart.jpg" alt="Projekt graficzny 4" width="640" height="420" loading="lazy" decoding="async" />
+          <figcaption>Projekt visual #4</figcaption>
+        </figure>
+        <figure class="project-card gallery-item" data-src="images/Horimiya.jpg" data-alt="Projekt graficzny 5">
+          <img src="images/Horimiya.jpg" alt="Projekt graficzny 5" width="640" height="420" loading="lazy" decoding="async" />
+          <figcaption>Projekt visual #5</figcaption>
+        </figure>
+        <figure class="project-card gallery-item" data-src="images/mcDuck.jpg" data-alt="Projekt graficzny 6">
+          <img src="images/mcDuck.jpg" alt="Projekt graficzny 6" width="640" height="420" loading="lazy" decoding="async" />
+          <figcaption>Projekt visual #6</figcaption>
+        </figure>
     </div>
   </main>
 
@@ -76,39 +71,23 @@
 
   <div class="gallery-modal" id="galleryModal" aria-hidden="true">
     <button class="gallery-modal__close" id="closeModal" aria-label="Zamknij podgląd">×</button>
-    <img id="modalImage" src="" alt="Podgląd projektu" />
+    
+    <div class="modal-layout">
+      <img id="modalImage" src="" alt="Podgląd projektu" />
+      
+      <div class="modal-sidebar">
+        <p id="modalDesc"></p>
+        <span class="project-card__date" id="modalDate"></span>
+      </div>
+    </div>
   </div>
 
   <footer class="footer">
     <p>© 2026 Patryk Karpiński — portfolio graficzne</p>
   </footer>
 
-  <script>
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const modal = document.getElementById('galleryModal');
-    const modalImage = document.getElementById('modalImage');
-    const closeModal = document.getElementById('closeModal');
-
-    galleryItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        modalImage.src = item.dataset.src;
-        modalImage.alt = item.dataset.alt;
-        modal.classList.add('is-open');
-        modal.setAttribute('aria-hidden', 'false');
-      });
-    });
-
-    closeModal.addEventListener('click', () => {
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden', 'true');
-    });
-
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        modal.classList.remove('is-open');
-        modal.setAttribute('aria-hidden', 'true');
-      }
-    });
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+  <script src="js/dane.js"></script> <!-- Najpierw ładujemy teksty -->
+  <script src="js/galery.js"></script> <!-- Potem uruchamiamy galerię -->
 </body>
 </html>
