@@ -433,19 +433,23 @@ h1 span {
 .github-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--text);
+  color: var(--text) !important; /* Wymusza biały kolor (blokuje fioletowy) */
   padding: 0.6rem 0.9rem;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.04);
   font-weight: 700;
+  white-space: nowrap; /* Pilnuje, by tekst był w jednej linii z ikoną */
 }
 
 .github-link svg {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 22px !important;  /* Sztywna szerokość ikony */
+  height: 22px !important; /* Sztywna wysokość ikony */
+  flex-shrink: 0; /* Całkowicie blokuje rozciąganie ikony */
+  fill: currentColor;
 }
 
 .page-hero {
