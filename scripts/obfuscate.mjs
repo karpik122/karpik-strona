@@ -12,7 +12,8 @@ const candidateDirs = [rootDir, path.join(rootDir, 'src')].filter((dir) => fs.ex
 const sourceDir = candidateDirs.find((dir) => {
   return fs.existsSync(path.join(dir, 'index.html')) ||
     fs.existsSync(path.join(dir, 'css')) ||
-    fs.existsSync(path.join(dir, 'images'));
+    fs.existsSync(path.join(dir, 'images')) ||
+    fs.existsSync(path.join(dir, 'js'));
 });
 
 fs.rmSync(distDir, { recursive: true, force: true });
